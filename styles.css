@@ -1,0 +1,73 @@
+/*
+    fonts
+*/
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+body{
+    margin: 5px;
+    background-image: url("https://thewallpaper.co/wp-content/uploads/2020/07/free-high-quality-full-hd-photos-full-hd-colourful-4k-download-wallpapers-hi-res-quality-images-computer-wallpapers-best-1920x1080-1.jpg");
+}
+.quizArea{
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title{
+    padding: 50px;
+    max-height: 150px;
+}
+.cardsArea{
+    padding: 50px 50px 70px 50px;
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px;
+    gap: 10px;
+}
+.container{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card{
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+}
+.front,.back{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    position: absolute;
+}
+.front{
+    background: lightgoldenrodyellow;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+.back{
+    background: lightblue;
+    transform: rotateY(180deg);
+    z-index: 1;
+}
+p,h1{
+    font-family: 'Concert One', cursive;
+}
+h1{
+    color: lightgoldenrodyellow;
+}
+p{
+    color: darkblue;
+}
+
+.container:hover .card{
+    transform: rotateY(180deg);
+}
